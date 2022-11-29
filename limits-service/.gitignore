@@ -20,9 +20,6 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-mvnw
-mvnw.cmd
-maven-wrapper.properties
 
 # Log file
 *.log
