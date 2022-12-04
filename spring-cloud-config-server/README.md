@@ -26,3 +26,9 @@ After that commit that file:
 git add *
 
 git commit -m "limits-service.properties"
+
+# Access
+
+http://localhost:8888/{file-name]}/default
+
+http://localhost:8888/limits-service/default
