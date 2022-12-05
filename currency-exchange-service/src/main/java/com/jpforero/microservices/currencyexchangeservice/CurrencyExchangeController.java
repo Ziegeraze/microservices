@@ -22,7 +22,7 @@ public class CurrencyExchangeController {
         CurrencyExchange currencyExchange = repository.findByFromAndTo(from, to);
 
         if (currencyExchange == null) {
-            throw new RuntimeException("Unable to find data for " + from + " to " + to);
+            throw new RuntimeException("Unable to find data from " + from + " to " + to);
         }
         String port = environment.getProperty("local.server.port");
         currencyExchange.setEnvironment(port);
