@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "b1cbf29c-cf9e-41de-8536-4a4203c6668a",
+		"name": "Master Microservices with Spring Boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "362912"
+	},
+	"item": [
+		{
+			"name": "Limits Service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/limits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"limits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Git config server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/limits-service/default",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"limits-service",
+						"default"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Git config server DEV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/limits-service/dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"limits-service",
+						"dev"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Git config server QA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/limits-service/qa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"limits-service",
+						"qa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Exchange 8000",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/currency-exchange/from/USD/to/INR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"currency-exchange",
+						"from",
+						"USD",
+						"to",
+						"INR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Exchange 8001",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8001/currency-exchange/from/USD/to/INR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"currency-exchange",
+						"from",
+						"USD",
+						"to",
+						"INR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Conversion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"currency-conversion",
+						"from",
+						"USD",
+						"to",
+						"INR",
+						"quantity",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Conversion Feign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"currency-conversion-feign",
+						"from",
+						"USD",
+						"to",
+						"INR",
+						"quantity",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway Currency Exchange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/currency-exchange/from/USD/to/INR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"currency-exchange",
+						"from",
+						"USD",
+						"to",
+						"INR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway Currency Conversion Feign",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"currency-conversion-feign",
+						"from",
+						"USD",
+						"to",
+						"INR",
+						"quantity",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gateway Currency Conversion Feign NEW",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"currency-conversion-new",
+						"from",
+						"USD",
+						"to",
+						"INR",
+						"quantity",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
