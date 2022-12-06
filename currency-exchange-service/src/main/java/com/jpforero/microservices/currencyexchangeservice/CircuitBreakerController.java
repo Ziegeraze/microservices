@@ -1,5 +1,8 @@
 package com.jpforero.microservices.currencyexchangeservice;
 
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +19,10 @@ public class CircuitBreakerController {
     @GetMapping("/sample-api")
     //@Retry(name = "default") //It tries 3 times before failing
     //@Retry(name = "sample-api") //It tries 3 times before failing
-    @Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")
+    //@Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")
+    @CircuitBreaker(name = "sample-api", fallbackMethod = "hardcodedResponse")
+    //@RateLimiter(name="default") // in 10s => 10000 calls to the sample api
+    @Bulkhead(name="default") //How many concurrences
     public String sampleApi() {
         logger.info("Sample API call received");
         ResponseEntity<String> forEntity =
