@@ -23,11 +23,6 @@ public class CurrencyExchangeController {
     @Autowired
     private Environment environment;
 
-    @Bean
-    public Sampler alwaysSampler() {
-        return Sampler.ALWAYS_SAMPLE;
-    }
-
     @GetMapping("/currency-exchange/from/{from}/to/{to}")
     public CurrencyExchange retrieveExchangeValue(
             @PathVariable String from, @PathVariable String to) {
